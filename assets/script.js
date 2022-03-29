@@ -58,6 +58,8 @@ $(".card").on("click", ".description", function () {
     // auto focus new element
     textInput.trigger("focus");
 });
+
+
 var loadTasks = function (){
     taskSave=JSON.parse(localStorage.getItem("taskSave"));
 
@@ -67,9 +69,14 @@ var loadTasks = function (){
             task:  []
         };
     }
-    $.each(taskSave,function(){});
+    $.each(taskSave,function(taskSave, arr){
+        arr.array.forEach(function(taskSave) {
+            
+        });
+    });
 };
 
 $(".button").on("click", function () {
-    localStorage.setItem("")
+    
+    localStorage.setItem("saveTask",JSON.stringify(saveTask));
 });
